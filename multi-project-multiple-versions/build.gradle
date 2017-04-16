@@ -25,6 +25,10 @@ allprojects {
 
     release {
         tagTemplate = '$name-$version'
+		preCommitText = '[Gradle Release Plugin] - '
+        preTagCommitMessage = '[ci-skip] Creating tag with release version: '
+        tagCommitMessage = 'Creating tag: '
+        newVersionCommitMessage = '[ci-skip] Next development version: '
     }
 
     task(startmessage) << {
